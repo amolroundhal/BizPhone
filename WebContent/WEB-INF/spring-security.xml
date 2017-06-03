@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<http auto-config="true" use-expressions="true" security="none" pattern="/resources/**">
+	</http> 
+	
+	<!-- <http auto-config="true" use-expressions="true" security="none" pattern="/images/**">
+ </http>  -->
+ 
+	 <http  auto-config="true" use-expressions="true">
+			 <access-denied-handler error-page="/403" />
+		  <form-login  login-page="/adminlogin" default-target-url="/dashboard" 
+   authentication-failure-url="/loginfailed" always-use-default-target="true"/>
+    
+  <logout logout-success-url="/logout"  /> 
+
+<remember-me key="uniqueAndSecret" token-validity-seconds="86400"/>
+  
+	</http>	
+	
+      
+		 <authentication-manager alias="authenticationManager">
+	  
+	    <authentication-provider >
+		 <jdbc-user-service data-source-ref="myDataSource" 	 			
+				users-by-username-query="select  user_name,password,is_active from login_details where binary user_name=?" 
+			
+	           authorities-by-username-query="select u.user_name,rs.name from login_details u left outer join role r on (u.role_id=r.id) left join role_has_rolepermission rp on r.id=rp.role_id left join role_permissions rs on rp.permission_id=rs.id where  u.user_name=?" 				
+		/>
+	  </authentication-provider>  
+	</authentication-manager> 
+	
+</beans:beans>
+
+
+

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<definition name="base.definition" template="/WEB-INF/templates/layout.jsp"> 
+			<put-attribute name="title" value="" />
+			<put-attribute name="header" value="/WEB-INF/templates/header.jsp" />
+			<put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+			<put-attribute name="body" value=""/>
+			<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+	</definition>
+	
+	<definition name="base.definition1" template="/WEB-INF/templates/layout.jsp"> 
+			<put-attribute name="title" value="" />
+			<put-attribute name="header" value="" />
+			<put-attribute name="menu" value="" />
+			<put-attribute name="body" value=""/>
+			<put-attribute name="footer" value="" />
+	</definition>
+	
+	<!-- <definition name="base.definition2" template="/WEB-INF/templates/layout.jsp"> 
+			<put-attribute name="title" value="" />
+			<put-attribute name="header" value="/WEB-INF/templates/header.jsp" />
+			<put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+			<put-attribute name="body" value=""/>
+			<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+	</definition> -->
+	  
+	
+	
+
+	<definition name="getRole" extends="base.definition">
+		<put-attribute name="title" value="User Role" />
+		<put-attribute name="body" value="/WEB-INF/jsp/roleList.jsp" />
+	</definition>
+	
+	
+	
+	
+	<definition name="adminlogin" extends="base.definition1" >
+		
+		<put-attribute name="title" value="Login" />
+			<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		
+	</definition> 
+	
+	
+	
+	 <definition name="index" extends="base.definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+	</definition> 
+	
+	
+	<definition name="addRole" extends="base.definition">
+		<put-attribute name="title" value="Add Role" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addNewRole.jsp"/>
+	</definition>
+
+	
+	<definition name="RoleList" extends="base.definition">
+		<put-attribute name="title" value="Role List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/editRoleList.jsp" />
+	</definition>
+	
+	<definition name="editRole" extends="base.definition">
+		<put-attribute name="title" value="Edit Role" />
+		<put-attribute name="body" value="/WEB-INF/jsp/EditRole.jsp" />
+	</definition>
+	
+	<definition name="addUser" extends="base.definition">
+		<put-attribute name="title" value="Add User" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addUser.jsp" />
+	</definition>
+	
+	<definition name="getUsers" extends="base.definition">
+		<put-attribute name="title" value="Users" />
+		<put-attribute name="body" value="/WEB-INF/jsp/userList.jsp" />
+	</definition>
+	
+	<definition name="getUserInfoForEdit" extends="base.definition">
+		<put-attribute name="title" value="Edit User" />
+		<put-attribute name="body" value="/WEB-INF/jsp/EditUser.jsp" />
+	</definition>
+
+	<definition name="village_list" extends="base.definition">
+		<put-attribute name="title" value="Village List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/village_list.jsp" />
+	</definition>
+	
+	<definition name="addDepartment" extends="base.definition">
+		<put-attribute name="title" value="Add Department" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addDepartment.jsp" />
+	</definition>
+	
+	<definition name="getDepartment" extends="base.definition">
+		<put-attribute name="title" value="Department List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/DepartmentList.jsp" />
+	</definition>
+	
+	<definition name="season_list" extends="base.definition">
+		<put-attribute name="title" value="Seasons List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/season_list.jsp" />
+	</definition>
+	
+	<definition name="getDepartmentInfoForEdit" extends="base.definition">
+		<put-attribute name="title" value="Edit Department" />
+		<put-attribute name="body" value="/WEB-INF/jsp/editDepartment.jsp" />
+	</definition>
+	
+	<definition name="village_allocation" extends="base.definition">
+		<put-attribute name="title" value="Village Allocation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/village_allocation.jsp" />
+	</definition>
+	
+	<definition name="userPinLogin" extends="base.definition1" >
+		<put-attribute name="title" value="Welcome to Sahakari Karkhana" />
+		<put-attribute name="body" value="/WEB-INF/jsp/UserPinLogin.jsp" />
+	</definition> 
+	
+	<definition name="userHome" extends="base.definition1" >
+		<put-attribute name="title" value="Welcome to Sahakari Karkhana" />
+		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+	</definition> 
+
+	<definition name="farmer_registration_list" extends="base.definition">
+		<put-attribute name="title" value="Registration List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/farmer_registration_list.jsp" />
+	</definition>
+	
+</tiles-definitions> 
+
+

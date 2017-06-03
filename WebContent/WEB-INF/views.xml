@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+     
+   <!--  <bean id="excelView" class="com.softtantra.salesapp.controller.ExcelBuilder" />
+    
+    <bean id="ExcelBuilderProduct" class="com.softtantra.salesapp.controller.ExcelBuilderProduct" />
+    
+
+     <bean id="userExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderUser" />
+     <bean id="ExcelBuilderDistributor" class="com.softtantra.salesapp.controller.ExcelBuilderDistributor" />
+     <bean id="excelViewUserReport" class="com.softtantra.salesapp.controller.ExcelBuilderUserReport" />
+     <bean id="ExcelBuilderLeave" class="com.softtantra.salesapp.controller.ExcelBuilderLeave" />
+    
+     <bean id="importUserExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderImportedUser" />
+     <bean id="importProductExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderImportedProduct" />
+     
+     <bean id="dailySalesExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderDailySales" />
+     <bean id="plannedVisitExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderPlannedVisit" />
+     <bean id="withAttendanceExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderWithAttendance" />
+     <bean id="noAttendanceSoFarExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderNoAttendanceSoFar" />
+     <bean id="stockReportExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderstockReport" />
+     
+     <bean id="productListExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderProductList" />
+     
+      <bean id="salesOrderReportExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderSalesOrder" />
+       <bean id="noAttendanceExcelView" class="com.softtantra.salesapp.controller.ExcelBuilderNoAttendance" /> -->
+</beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc
+	    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	    http://www.springframework.org/schema/tx 
+	    http://www.springframework.org/schema/tx/spring-tx.xsd">
+	    
+	<bean id="wsLoginDao" class="com.softtantra.bizphone.daoImpl.WsLoginDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="wsLoginService" class="com.softtantra.bizphone.serviceImpl.WsLoginServiceImpl">
+		<property name="wsLoginDao" ref="wsLoginDao"></property>
+    </bean>
+    
+    <bean id="wsDatasyncDao" class="com.softtantra.bizphone.daoImpl.WsDatasyncDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="wsDatasyncService" class="com.softtantra.bizphone.serviceImpl.WsDatasyncServiceImpl">
+		<property name="wsDatasyncDao" ref="wsDatasyncDao"></property>
+    </bean>
+    
+    <bean id="wsUploadDao" class="com.softtantra.bizphone.daoImpl.WsUploadDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="wsUploadService" class="com.softtantra.bizphone.serviceImpl.WsUploadServiceImpl">
+		<property name="wsUploadDao" ref="wsUploadDao"></property>
+    </bean>
+    
+</beans>	    
