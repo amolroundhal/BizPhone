@@ -26,9 +26,9 @@ public class WsLoginController {
 		
 		int UserId = wsLoginService.CheckLogin(login.getUsername(),login.getPassword());
 		
-		//AjaxResponse response = wsLoginService.login(login,UserId);
-		//response.setStatus("error");
-		return null;//response;
+		AjaxResponse response = wsLoginService.login(login,UserId);
+		response.setStatus("error");
+		return response;
 	}
 	
 	@ResponseBody

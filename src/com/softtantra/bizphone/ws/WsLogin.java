@@ -4,6 +4,7 @@ public class WsLogin {
 	String username;
 	String password;
 	String device_type;
+	String role_name;
 	String imei_no;
 	String device_id;
 	String apk_version;
@@ -57,4 +58,11 @@ public class WsLogin {
 	public void setPage_no(int page_no) {
 		this.page_no = page_no;
 	}
+	public String getRole_name() {
+		return role_name;
+	}
+	public void setRole_name(String role_name) {
+		this.role_name = role_name;
+	}
+	
 }

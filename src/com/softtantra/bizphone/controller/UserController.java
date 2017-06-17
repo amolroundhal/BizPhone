@@ -56,9 +56,9 @@ public class UserController {
 		if(session.getAttribute("username")!=null)
 		{
 					List<Role> roles = userService.geRoles(); 
-					Map<Integer, String> departments = commonService.getDepartments(session);
+					//Map<Integer, String> departments = commonService.getDepartments(session);
 					map.addAttribute("roles", roles);
-					map.addAttribute("departments", departments);
+					//map.addAttribute("departments", departments);
 		return "addUser";
 		
 		}
@@ -361,9 +361,9 @@ public class UserController {
 		map.addAttribute("userId", user_id);
 		
 		List<Role> roles = userService.geRoles();
-		Map<Integer, String> departments = commonService.getDepartments(session);
+		//Map<Integer, String> departments = commonService.getDepartments(session);
 		map.addAttribute("roles", roles);
-		map.addAttribute("departments", departments);
+		//map.addAttribute("departments", departments);
 		 
 		return "getUserInfoForEdit";
 	}

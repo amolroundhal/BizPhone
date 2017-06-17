@@ -78,11 +78,11 @@ public class LoginController {
 				
 				String username = principal.getName();
 				LoginDetails result=loginservice.checkLogin(username);
-				String department = loginservice.getDepartment(result.getUser_id());
+				//String department = loginservice.getDepartment(result.getUser_id());
 				session.setAttribute("username",username);
 				session.setAttribute("user_id", result.getUser_id());
 				session.setAttribute("role_name", result.getPassword());
-				session.setAttribute("department", department);
+				//session.setAttribute("department", department);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -269,21 +269,9 @@ var validator = $("#userForm").validate({
         	required : true
         },
         
-        state : {
-        	required : true
-        },
-        city_name : {
-        	required : true
-        },
         password : {
         	required : true
         },
-        department_id : {
-        	required : true
-        }
-        
-        
-       
     },
     messages: {
     	first_name : {
@@ -313,36 +301,6 @@ var validator = $("#userForm").validate({
         status : {
         	required : "<font color=red>Please select reporting role.</font>"
         },
-        reporting_role_id : {
-        	required : "<font color=red>Please select reporting role.</font>"
-        },
-        reporting_manager_id : {
-        	required : "<font color=red>Please select reporting manager.</font>"
-        },
-        distributor_id : {
-        	required : "<font color=red>Please select distributor.</font>"
-        },
-        
-        routes : {
-        	required : "<font color=red>Please select routes.</font>"
-        },
-        state : {
-        	required : "<font color=red>Please select state.</font>"
-        },
-        city_name : {
-        	required : "<font color=red>Please select city.</font>"
-        },
-        profile_img1:{
-        	filesize : "<font color='red'>File must be less than 200KB</font>",
-        	accept : "<font color='red'>please select png format image</font>"
-        },
-        signature1:{
-        	filesize : "<font color='red'>File must be less than 200KB</font>",
-        	accept : "<font color='red'>please select png format image</font>"
-        },
-        department_id : {
-        	required : "Please select department."
-        }
         
     }
 });
