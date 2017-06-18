@@ -1,5 +1,7 @@
 package com.softtantra.bizphone.daoImpl;
 
+import java.math.BigInteger;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -99,6 +101,9 @@ public class WsLoginDaoImpl implements WsLoginDao {
 				response.setMsg("Login Failed");
 			}else {
 				User user = new User();
+				
+			boolean result = mobileNumnerUniqueCheck(business.getMobile_no());
+			if(result){
 				user.setCreated_by(userId);
 				user.setCreated_date(DateConversions.getCurrentDate());
 				user.setEmail(business.getEmail());
@@ -113,6 +118,11 @@ public class WsLoginDaoImpl implements WsLoginDao {
 				session.save(user);
 				response.setStatus("success");
 				response.setMsg("Business added sucessfully.");
+			}else{
+				response.setStatus("failed");
+				response.setMsg("This mobile number is already registered.");
+			}
+				
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -124,6 +134,24 @@ public class WsLoginDaoImpl implements WsLoginDao {
 		}
 		return response;
 
+	}
+
+	private boolean mobileNumnerUniqueCheck(String mobile_no) {
+		// TODO Auto-generated method stub
+		Session session = initiateSession();
+		try {
+			Query query = session.createSQLQuery("select count(*) from user_details where mobile_no='"+mobile_no+"'") ;
+			BigInteger count =  (BigInteger) (query.setMaxResults(1).uniqueResult()!=null?query.setMaxResults(1).uniqueResult():0);
+			if(count.intValue()==0){
+				return true;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			destroySession(session);
+		}
+		return false;
 	}
 
 	@Override
